@@ -1,0 +1,24 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sr. No</th>
+            <th>Student Name</th>
+            <th>Student Age</th>
+            <th>Status</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stud of studList">
+            <td>{{stud.SrNo}}</td>
+            <td>{{stud.StudentName}}</td>
+            <td>{{stud.Age}}</td>
+            <td [ngStyle]="{'background-color':stud.IsActive ? 'yellow':'red'}">{{stud.IsActive ? 'Active': 'De-Active'}}</td>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [ngStyle]="{'width':stud.Marks+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{stud.Marks+'%'}}</div>
+                  </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

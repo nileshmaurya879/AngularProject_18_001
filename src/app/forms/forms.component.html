@@ -1,0 +1,54 @@
+<form class="row g-3"  #form="ngForm" >
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label" >FirstName</label>
+    <input type="text" class="form-control" id="inputEmail4" #fname="ngModel" [(ngModel)]=studentObj.FirstName name="FirstName" required minlength="3">
+   
+    @if((fname.touched || fname.dirty) && fname.errors?.['required']){
+      <span class="text-danger">This is required value..</span>
+    }
+    <h3>{{fname.dirty}}</h3>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">LastName</label>
+    <input type="text" class="form-control" id="inputPassword4" [(ngModel)]=studentObj.LastName name="LastName">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">UserName</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="" [(ngModel)]=studentObj.UserName name="UserName">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="" [(ngModel)]=studentObj.City name="City">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select" [(ngModel)]=studentObj.State name="State">
+      <option selected>Select State</option>
+      <option>Pune</option>
+      <option>Mumbai</option>
+      <option>Surat</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">ZipCode</label>
+     <input type="text" class="form-control" id="inputZip"  [(ngModel)]=studentObj.ZipCode name="ZipCode">
+  </div>
+
+  <!-- <div class="col-12">
+    <label for="inputAddress002" class="form-label">ZipCode</label>
+    <input type="text" class="form-control" id="inputAddress002" placeholder="" [(ngModel)]=studentObj.TestCode name="TestCode">
+  </div> -->
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" [(ngModel)]=studentObj.IsAcceptTerm name="IsAcceptTerm">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="button" (click)="onSubmit()" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+    {{form.valid}}
+    <button type="button" (click)="Reset()" class="btn btn-primary">Reset Button</button>
+  </div>
+</form>

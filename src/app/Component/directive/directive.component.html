@@ -1,0 +1,39 @@
+<p *ngIf="isActive">Hello world</p>
+
+
+<input type="text" [value]=selectedItem>
+
+<select [(ngModel)]="selectedItem">
+    <option *ngFor="let name of objectArray;" [value]=name.id>{{name.name}}</option>
+</select>
+
+<div>
+    <p class="text-center" [ngClass]=divColor>hello world</p>
+</div>
+
+<button class="btn btn-primary" (click)="ApplyBlue()">Blue</button>
+<button class="btn btn-danger" (click)="ApplyRed()">Red</button>
+
+<div>
+    <p class="text-center" [ngClass]="isToggle == true ? 'bg-primary': 'bg-danger'">hello world</p>
+</div>
+
+<button class="btn btn-danger" (click)="Toggel()">Toggle</button>
+<div>
+    <p [ngClass]="num1 == num2 ? 'bg-primary': 'bg-danger'">Input type</p>
+</div>
+
+<input type="text"  [(ngModel)]=num1 value="">
+<input type="text" [(ngModel)]=num2 value="">
+
+<div>
+    <p [ngClass]="checkBoxTesting == true ? 'bg-primary' : 'bg-danger'">checkbox testing</p>
+</div>
+
+<input type="checkbox" [(ngModel)]=checkBoxTesting>
+
+<table>
+    <thead>
+        
+    </thead>
+</table>

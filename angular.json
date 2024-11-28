@@ -67,7 +67,8 @@
               "buildTarget": "angular_Project_18:build:production"
             },
             "development": {
-              "buildTarget": "angular_Project_18:build:development"
+              "buildTarget": "angular_Project_18:build:development",
+              "port": 4203
             }
           },
           "defaultConfiguration": "development"

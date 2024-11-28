@@ -1,0 +1,8 @@
+<p>call-api-detail works!</p>
+
+<button type="button" (click)="getAllUser()" class="btn btn-success">Get API</button>
+<select class="form-select">
+    @for (item of userList; track $index) {
+        <option>{{item.name}}</option>
+    }
+</select>

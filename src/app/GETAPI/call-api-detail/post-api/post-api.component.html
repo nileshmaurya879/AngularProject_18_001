@@ -1,0 +1,12 @@
+<form [formGroup]="studObj">
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Category Name:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" formControlName="firstName" placeholder="Enter Category Name">
+    </div>
+    <div class="mb-3">
+        <button type="button" class="btn btn-primary"  (click)="postCategoryData()">Submit</button>
+        <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
+    </div>
+</form>
+
+ 
