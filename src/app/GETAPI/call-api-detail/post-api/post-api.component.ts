@@ -15,25 +15,26 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 export class PostApiComponent {
   // test002:MyTest001
-  constructor(private http:HttpClient)
-  { }
-  studObj:FormGroup = new FormGroup({
-    firstName: new FormControl()
+  constructor(private http: HttpClient) { }
+  studObj: FormGroup = new FormGroup({
+    CategoryName: new FormControl(),
+    Operation: new FormControl('ADD')
   })
 
-  postCategoryData()
-  {
+  postCategoryData() {
     debugger;
-     console.log(JSON.stringify(this.studObj.value));
+    console.log(JSON.stringify(this.studObj.value));
     //  this.test002 = this.studObj;
-     this.http.post("https://localhost:44323/api/Category/AddCategory_002", JSON.stringify(this.studObj.value),  {
+    this.http.post("https://localhost:44323/api/Category/AddCategory_002", this.studObj.value, {
       headers: { 'Content-Type': 'application/json' }
-  }).subscribe((res:any)=>{
-        console.log(res)
-     })
+    }).subscribe((res: any) => {
+      console.log(res);
+    }, error => {
+      console.error('Error posting data:', error);
+    });
+
   }
-  ResetCategoryData()
-  {
+  ResetCategoryData() {
     this.studObj = new FormGroup({
       firstName: new FormControl()
     })

@@ -1,12 +1,34 @@
-<form [formGroup]="studObj">
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 p-3 bg-success text-white rounded" >Category Details:</div>
+      <div class="col-8 bg-light text-dark rounded border border-">
+            .col-8<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit. this 4-column-wide div gets wrapped onto a new line as one contiguous unit.
+      </div>
+      <div class="col-4 bg-light text-dark rounded">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Category Name:</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Category" aria-describedby="emailHelp" formControlName="CategoryName">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary me-1" (click)="postCategoryData()">Add</button>
+                <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+
+
+<!-- <form [formGroup]="studObj">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Category Name:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" formControlName="firstName" placeholder="Enter Category Name">
+        <input type="text" class="form-control" id="formGroupExampleInput" formControlName="CategoryNames" placeholder="Enter Category Name">
     </div>
     <div class="mb-3">
         <button type="button" class="btn btn-primary"  (click)="postCategoryData()">Submit</button>
         <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
     </div>
-</form>
+</form> -->
 
  
