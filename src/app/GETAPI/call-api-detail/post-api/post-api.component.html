@@ -1,34 +1,45 @@
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 p-3 bg-success text-white rounded" >Category Details:</div>
-      <div class="col-8 bg-light text-dark rounded border border-">
-            .col-8<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit. this 4-column-wide div gets wrapped onto a new line as one contiguous unit.
-      </div>
-      <div class="col-4 bg-light text-dark rounded">
-        <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Category Name:</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Category" aria-describedby="emailHelp" formControlName="CategoryName">
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary me-1" (click)="postCategoryData()">Add</button>
-                <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
-            </div>
-          </form>
-      </div>
+  <div class="row">
+    <div class="col-12 p-3 bg-success text-white rounded">Category Details:</div>
+    <div class="col-8 bg-light text-dark rounded border">
+      <table class="table">
+        <thead class="table-success">
+          <tr>
+            <th scope="col">Category Id</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of  CategoryTest">
+            <td>{{item.categoryId}}</td>
+            <td>{{item.categoryName}}</td>
+            <td>
+              <button type="button" class="btn btn-success me-1" (click)="FetchCategory(item)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="DeleteCategory(item.categoryId)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <div class="col-4 bg-light text-dark rounded border">
+      <!-- <form [formGroup]="studObj"> -->
+        <div class="mb-3">
+          <label class="form-label">Category Name:</label>
+          <input type="text" class="form-control"  [(ngModel)]="studObj.CategoryName"
+            placeholder="Enter Category Name">
+        </div>
+        <div class="mb-3">
+         <!-- {{studObj|json}} -->
+          @if( this.studObj.CategoryId == 0){
+            <button type="button" class="btn btn-primary" (click)="postCategoryData()">Add</button>
+          }@else{
+            <button type="button" class="btn btn-primary" (click)="UpdateCategoryData()">Update</button>
+          }
+          <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
+        </div>
+      <!-- </form> -->
+    </div>
+
   </div>
-
-
-<!-- <form [formGroup]="studObj">
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Category Name:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" formControlName="CategoryNames" placeholder="Enter Category Name">
-    </div>
-    <div class="mb-3">
-        <button type="button" class="btn btn-primary"  (click)="postCategoryData()">Submit</button>
-        <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
-    </div>
-</form> -->
-
- 
+</div>
