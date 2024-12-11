@@ -14,30 +14,30 @@
             <tr *ngFor="let item of  CategoryTest">
               <td>{{item.categoryId}}</td>
               <td>{{item.categoryName}}</td>
-              <!-- <td>
+              <td>
                 <button type="button" class="btn btn-success me-1" (click)="FetchCategory(item)">Edit</button>
                 <button type="button" class="btn btn-danger" (click)="DeleteCategory(item.categoryId)">Delete</button>
-              </td> -->
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <!-- <div class="col-4 bg-light text-dark rounded border">
+      <div class="col-4 bg-light text-dark rounded border">
           <div class="mb-3">
             <label class="form-label">Category Name:</label>
-            <input type="text" class="form-control"  [(ngModel)]=""
+            <input type="text" class="form-control"  [(ngModel)]="this.studObj.CategoryName"
               placeholder="Enter Category Name">
           </div>
           <div class="mb-3">
            
-            @if( this.studObj.CategoryId == 0){
+            @if(this.studObj.CategoryId == 0){
               <button type="button" class="btn btn-primary" (click)="postCategoryData()">Add</button>
             }@else{
               <button type="button" class="btn btn-primary" (click)="UpdateCategoryData()">Update</button>
             }
             <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
           </div>
-      </div> -->
+      </div>
   
     </div>
   </div>
