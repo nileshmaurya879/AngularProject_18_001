@@ -31,18 +31,31 @@ export class UsingServiceCategoryComponent {
     );
   }
   FetchCategory(item:any){
+    console.log("***********",item)
+    this.studObj.CategoryName = item.categoryName
+    this.studObj.CategoryId =  item.categoryId
+    console.log('fetch Category',this.studObj)
+    }
 
-  }
+    
+ 
   DeleteCategory(CatId:any){
 
   }
 
   postCategoryData(){
-
+    console.log(this.studObj);
+    this.CatSer.AddCategoryList(this.studObj).subscribe((res:any)=>{
+      console.log("success")
+      this.GetCategoryDataList();
+    })
   }
 
   UpdateCategoryData(){
-
+    console.log(this.studObj)
+    this.CatSer.UpdateCategory(this.studObj).subscribe((res:any)=>{
+      this.GetCategoryDataList();
+    })
   }
 
   ResetCategoryData(){
