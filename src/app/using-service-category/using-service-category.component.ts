@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { CategoryServiceService } from '../category-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CallApiDetailComponent } from "../GETAPI/call-api-detail/call-api-detail.component";
+import { AlertComponent } from "../ResuableComponent/alert/alert.component";
 
 @Component({
   selector: 'app-using-service-category',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule, CallApiDetailComponent, AlertComponent],
   templateUrl: './using-service-category.component.html',
   styleUrl: './using-service-category.component.scss'
 })
@@ -40,7 +42,10 @@ export class UsingServiceCategoryComponent {
     
  
   DeleteCategory(CatId:any){
-
+    console.log('Delete',CatId);
+    this.CatSer.DeleteCategory(CatId).subscribe((res:any)=>{
+      this.GetCategoryDataList()
+    })
   }
 
   postCategoryData(){
