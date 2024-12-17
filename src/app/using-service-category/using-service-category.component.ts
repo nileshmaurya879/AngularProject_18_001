@@ -64,6 +64,9 @@ export class UsingServiceCategoryComponent {
   }
 
   ResetCategoryData(){
-    
+    this.studObj= {
+      "CategoryName":"",
+      "CategoryId":0
+    }
   }
 }

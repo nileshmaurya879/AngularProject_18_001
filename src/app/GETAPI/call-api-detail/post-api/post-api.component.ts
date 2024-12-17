@@ -3,12 +3,13 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef } from '@angular/core';
+import { AlertComponent } from "../../../ResuableComponent/alert/alert.component";
 
 
 @Component({
   selector: 'app-post-api',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, FormsModule],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule, AlertComponent],
   templateUrl: './post-api.component.html',
   styleUrl: './post-api.component.scss'
 })
