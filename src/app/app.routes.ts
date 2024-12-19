@@ -6,6 +6,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { CallApiDetailComponent } from './GETAPI/call-api-detail/call-api-detail.component';
 import { PostApiComponent } from './GETAPI/call-api-detail/post-api/post-api.component';
 import { UsingServiceCategoryComponent } from './using-service-category/using-service-category.component';
+import { LifeCycleComponent } from './ComponentLifeCycle/life-cycle/life-cycle.component';
 export const routes: Routes = 
 [
         {
@@ -35,8 +36,9 @@ export const routes: Routes =
         {
             path:"SERVICEPOSTAPI",
             component:UsingServiceCategoryComponent
-        }
-
-
- 
+        },
+        {
+            path:"LifeCycle",
+            component:LifeCycleComponent
+        } 
 ];
