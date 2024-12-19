@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-3 bg-success text-white rounded">Category Details:</div>
-      <app-alert [message]="'Hello test'"></app-alert>
+      <app-alert [message]="'This is test'"></app-alert>
       <div class="col-8 bg-light text-dark rounded border">
         <table class="table">
           <thead class="table-success">
@@ -39,6 +39,6 @@
             <button type="button" class="btn btn-danger" (click)="ResetCategoryData()">Reset</button>
           </div>
       </div>
-  
+      <app-my-button [btnClass]="'btn btn-success'" (btnClick)="TestOutput()" [btnText]="'Save'" bt></app-my-button>
     </div>
   </div>

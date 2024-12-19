@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CallApiDetailComponent } from "../GETAPI/call-api-detail/call-api-detail.component";
 import { AlertComponent } from "../ResuableComponent/alert/alert.component";
+import { MyButtonComponent } from "../ResuableComponent/my-button/my-button.component";
 
 @Component({
   selector: 'app-using-service-category',
   standalone: true,
-  imports: [CommonModule, FormsModule, CallApiDetailComponent, AlertComponent],
+  imports: [CommonModule, FormsModule, CallApiDetailComponent, AlertComponent, MyButtonComponent],
   templateUrl: './using-service-category.component.html',
   styleUrl: './using-service-category.component.scss'
 })
@@ -68,5 +69,9 @@ export class UsingServiceCategoryComponent {
       "CategoryName":"",
       "CategoryId":0
     }
+  }
+
+  TestOutput(){
+    console.log("Hello test")
   }
 }
