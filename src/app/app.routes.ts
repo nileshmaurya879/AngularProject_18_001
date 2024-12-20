@@ -7,6 +7,8 @@ import { CallApiDetailComponent } from './GETAPI/call-api-detail/call-api-detail
 import { PostApiComponent } from './GETAPI/call-api-detail/post-api/post-api.component';
 import { UsingServiceCategoryComponent } from './using-service-category/using-service-category.component';
 import { LifeCycleComponent } from './ComponentLifeCycle/life-cycle/life-cycle.component';
+import { NgTemplateComponent } from './Component/ngTemplate/ng-template/ng-template.component';
+import { NgContainerComponent } from './Component/ngContainer/ng-container/ng-container.component';
 export const routes: Routes = 
 [
         {
@@ -40,5 +42,13 @@ export const routes: Routes =
         {
             path:"LifeCycle",
             component:LifeCycleComponent
-        } 
+        },
+        {
+            path:"NgTemplate",
+            component:NgTemplateComponent
+        },
+        {
+            path:"NgContainer",
+            component:NgContainerComponent
+        }  
 ];

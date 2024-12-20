@@ -1,0 +1,8 @@
+<p>ng-template works!</p>
+
+<div *ngIf="isNgTemplate; else notemplate">
+    This is test
+</div>
+<ng-template #notemplate>
+    else part
+</ng-template>
