@@ -12,6 +12,12 @@ import { NgContainerComponent } from './Component/ngContainer/ng-container/ng-co
 import { LoginComponent } from './Component/login/login.component';
 export const routes: Routes = 
 [
+        //Default Rout
+        {
+            path:'',
+            redirectTo:"login",
+            pathMatch:"full"
+        },
         {
             path:"login",
             component:LoginComponent
