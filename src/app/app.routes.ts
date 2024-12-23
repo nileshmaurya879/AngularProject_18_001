@@ -9,8 +9,13 @@ import { UsingServiceCategoryComponent } from './using-service-category/using-se
 import { LifeCycleComponent } from './ComponentLifeCycle/life-cycle/life-cycle.component';
 import { NgTemplateComponent } from './Component/ngTemplate/ng-template/ng-template.component';
 import { NgContainerComponent } from './Component/ngContainer/ng-container/ng-container.component';
+import { LoginComponent } from './Component/login/login.component';
 export const routes: Routes = 
 [
+        {
+            path:"login",
+            component:LoginComponent
+        },
         {
             path:"add-employee",
             component:AddEmployeeComponent
