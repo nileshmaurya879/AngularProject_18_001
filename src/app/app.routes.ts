@@ -10,6 +10,7 @@ import { LifeCycleComponent } from './ComponentLifeCycle/life-cycle/life-cycle.c
 import { NgTemplateComponent } from './Component/ngTemplate/ng-template/ng-template.component';
 import { NgContainerComponent } from './Component/ngContainer/ng-container/ng-container.component';
 import { LoginComponent } from './Component/login/login.component';
+import { LayoutComponent } from './Component/layout/layout.component';
 export const routes: Routes = 
 [
         //Default Rout
@@ -23,43 +24,50 @@ export const routes: Routes =
             component:LoginComponent
         },
         {
-            path:"add-employee",
-            component:AddEmployeeComponent
-        },
-        {
-            path:"student-display",
-            component:StudentDisplayComponent
-        },
-        {
-            path:"Forms",
-            component:FormsComponent
-        },
-        {
-            path:"Reactive",
-            component:ReactiveFormComponent
-        },
-        {
-            path:"GetAPI",
-            component:CallApiDetailComponent
-        },
-        {
-            path:"POSTAPI",
-            component:PostApiComponent
-        },
-        {
-            path:"SERVICEPOSTAPI",
-            component:UsingServiceCategoryComponent
-        },
-        {
-            path:"LifeCycle",
-            component:LifeCycleComponent
-        },
-        {
-            path:"NgTemplate",
-            component:NgTemplateComponent
-        },
-        {
-            path:"NgContainer",
-            component:NgContainerComponent
-        }  
+            path:"login",
+            component:LayoutComponent,
+            children:[
+                {
+                    path:"add-employee",
+                    component:AddEmployeeComponent
+                },
+                {
+                    path:"student-display",
+                    component:StudentDisplayComponent
+                },
+                {
+                    path:"Forms",
+                    component:FormsComponent
+                },
+                {
+                    path:"Reactive",
+                    component:ReactiveFormComponent
+                },
+                {
+                    path:"GetAPI",
+                    component:CallApiDetailComponent
+                },
+                {
+                    path:"POSTAPI",
+                    component:PostApiComponent
+                },
+                {
+                    path:"SERVICEPOSTAPI",
+                    component:UsingServiceCategoryComponent
+                },
+                {
+                    path:"LifeCycle",
+                    component:LifeCycleComponent
+                },
+                {
+                    path:"NgTemplate",
+                    component:NgTemplateComponent
+                },
+                {
+                    path:"NgContainer",
+                    component:NgContainerComponent
+                }  
+            ]
+        }
+        
 ];
