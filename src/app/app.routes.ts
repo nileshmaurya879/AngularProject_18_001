@@ -24,7 +24,7 @@ export const routes: Routes =
             component:LoginComponent
         },
         {
-            path:"login",
+            path:"",
             component:LayoutComponent,
             children:[
                 {

@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './add-employee.component.scss'
 })
 export class AddEmployeeComponent {
-
+  constructor(){
+    console.log("employee component load.............")
+  }
 }

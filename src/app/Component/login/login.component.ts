@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor(private router:Router){}
+  onClick(){
+    console.log('onclick')
+    this.router.navigateByUrl("/add-employee");
+  }
 }
