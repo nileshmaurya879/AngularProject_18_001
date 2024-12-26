@@ -13,6 +13,7 @@ export class LoginComponent {
   constructor(private router:Router){}
   onClick(){
     console.log('onclick')
-    this.router.navigateByUrl("/add-employee");
+    this.router.navigate(['/add-employee']);
+
   }
 }
