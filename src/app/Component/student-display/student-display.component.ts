@@ -15,6 +15,7 @@ export class StudentDisplayComponent {
       {SrNo:2, StudentName:"Sohan Kumar", Age:29, IsActive:false, Marks:30},
       {SrNo:3, StudentName:"Nilesh Kumar", Age:50, IsActive:false, Marks:60},
       {SrNo:4, StudentName:"Rohit Kumar", Age:60, IsActive:true, Marks:90},
-      {SrNo:5, StudentName:"Komal Maurya", Age:28, IsActive:false, Marks:10},
+      {SrNo:5, StudentName:"Honey Maurya", Age:12, IsActive:true, Marks:100},
+      {SrNo:6, StudentName:"Lokesh Maurya", Age:14, IsActive:false, Marks:90}
     ]
 }
