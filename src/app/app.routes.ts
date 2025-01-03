@@ -11,6 +11,7 @@ import { NgTemplateComponent } from './Component/ngTemplate/ng-template/ng-templ
 import { NgContainerComponent } from './Component/ngContainer/ng-container/ng-container.component';
 import { LoginComponent } from './Component/login/login.component';
 import { LayoutComponent } from './Component/layout/layout.component';
+import { authGaurdGuard } from './auth-gaurd.guard';
 export const routes: Routes = 
 [
         //Default Rout
@@ -45,7 +46,8 @@ export const routes: Routes =
                 },
                 {
                     path:"GetAPI",
-                    component:CallApiDetailComponent
+                    component:CallApiDetailComponent,
+                    canActivate:[authGaurdGuard]
                 },
                 {
                     path:"POSTAPI",

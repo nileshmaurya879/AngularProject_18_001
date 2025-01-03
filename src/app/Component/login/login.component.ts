@@ -28,7 +28,8 @@ export class LoginComponent {
       if(this.loginObj.email == result[0].email && this.loginObj.password==result[0].password)
       {
         console.log('yess...................'+this.loginObj.password)
-        this.router.navigate(['/student-display']);
+        //this.router.navigate(['/student-display']);
+        this.router.navigateByUrl('student-display');
         localStorage.setItem("myTest",result[0].email)
       } 
     })
