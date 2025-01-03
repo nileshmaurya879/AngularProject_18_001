@@ -13,7 +13,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private router:Router, private http:HttpClient){}
+  constructor(private router:Router, private http:HttpClient){
+    localStorage.clear();
+  }
   loginObj:any= {
     email:null,
     password:null
@@ -27,6 +29,7 @@ export class LoginComponent {
       {
         console.log('yess...................'+this.loginObj.password)
         this.router.navigate(['/student-display']);
+        localStorage.setItem("myTest",result[0].email)
       } 
     })
 

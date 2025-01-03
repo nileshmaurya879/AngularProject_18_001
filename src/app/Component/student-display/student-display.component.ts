@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class StudentDisplayComponent {
 
+    localValue:any = localStorage.getItem("myTest");
     studList:any[]=[
       {SrNo:1, StudentName:"Mohan Kumar", Age:27, IsActive:true, Marks:26},
       {SrNo:2, StudentName:"Sohan Kumar", Age:29, IsActive:false, Marks:30},
